@@ -56,6 +56,11 @@ jobs:
       - name: Build package
         run: npm run build
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '>=20.8.1' 
+          cache: 'npm'
+
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
