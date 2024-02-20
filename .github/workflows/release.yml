@@ -102,7 +102,7 @@ jobs:
         if: steps.semantic.outputs.new_release_published == 'true'
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
 
       - name: Push updates to branch for major version
         if: steps.semantic.outputs.new_release_published == 'true'
