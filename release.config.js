@@ -2,6 +2,7 @@
  * @type {import('semantic-release').GlobalConfig}
  */
 module.exports = {
+  dryRun: false,
   branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
@@ -13,6 +14,7 @@ module.exports = {
         npmPublish: true,
       },
     ],
+    '@semantic-release/github',
     '@semantic-release/git',
   ],
 };
