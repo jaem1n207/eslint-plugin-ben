@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.1...v1.0.2) (2024-02-21)
+
+
+### Bug Fixes
+
+* remove 'branches' configuration from release.config.js ([9ee89f2](https://github.com/jaem1n207/eslint-plugin-ben/commit/9ee89f2039d36c4fde0ee121250b90df57d74828))
+
 # 1.0.0 (2024-02-21)
 
 
