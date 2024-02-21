@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-ben",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ESLint rules for me",
   "repository": {
     "type": "git",

@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.2...v1.0.3) (2024-02-21)
+
+
+### Bug Fixes
+
+* 토큰 수정 ([c8ad3d7](https://github.com/jaem1n207/eslint-plugin-ben/commit/c8ad3d700014396927bd11124ea867271162e494))
+
 ## [1.0.2](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.1...v1.0.2) (2024-02-21)
 
 
