@@ -54,6 +54,8 @@ npm install eslint-plugin-ben --save-dev
 
 ## 구성
 
+<!-- prettier-ignore-start -->
+
 <!-- begin auto-generated configs list -->
 
 |    | Name          |
@@ -62,7 +64,11 @@ npm install eslint-plugin-ben --save-dev
 
 <!-- end auto-generated configs list -->
 
+<!-- prettier-ignore-end -->
+
 ## 규칙들
+
+<!-- prettier-ignore-start -->
 
 <!-- begin auto-generated rules list -->
 
@@ -76,3 +82,5 @@ npm install eslint-plugin-ben --save-dev
 | [ban-moment](docs/rules/ban-moment.md) | prefer date-fns to moment for better tree-shaking support  | ✅  | 🔧 |
 
 <!-- end auto-generated rules list -->
+
+<!-- prettier-ignore-end -->
