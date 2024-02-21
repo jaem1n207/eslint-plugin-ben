@@ -58,26 +58,37 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '>=20.8.1' 
+          node-version: '>=20.8.1'
           cache: 'npm'
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
       - name: Action For Semantic Release
-        uses: cycjimmy/semantic-release-action@v4.0.0
+        uses: cycjimmy/semantic-release-action@v4
         id: semantic
         with:
           branches: |
             [
-              "main"
+              '+([0-9])?(.{+([0-9]),x}).x',
+              'main',
+              'next',
+              'next-major',
+              {
+                name: 'beta',
+                prerelease: true
+              },
+              {
+                name: 'alpha',
+                prerelease: true
+              }
             ]
           extra_plugins: |
-            - "@semantic-release/git"
-            - "@semantic-release/changelog"
+            @semantic-release/git
+            @semantic-release/changelog
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.RELEASE_NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
 
       - name: Test Outputs of Semantic Release
         if: steps.semantic.outputs.new_release_published == 'true'
@@ -102,6 +113,6 @@ jobs:
 
       - name: Push updates to branch for major version
         if: steps.semantic.outputs.new_release_published == 'true'
-        run: "git push https://x-access-token:${{ secrets.RELEASE_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:refs/heads/v${{ steps.semantic.outputs.new_release_major_version }}"
-        env: 
+        run: 'git push https://x-access-token:${{ secrets.RELEASE_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:refs/heads/v${{ steps.semantic.outputs.new_release_major_version }}'
+        env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
