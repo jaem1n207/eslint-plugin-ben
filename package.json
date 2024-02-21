@@ -32,7 +32,7 @@
     "all-in-one": "npm-run-all --parallel update:eslint-docs format lint test",
     "------------------------------------------------": "",
     "build:dev": "node tasks/build.js --debug",
-    "build": "npm run all-in-one && node tasks/build.js",
+    "build": "node tasks/build.js",
     "prepublishOnly": "safe-publish-latest && npm run build",
     "prepublish": "not-in-publish || npm run prepublishOnly"
   },
