@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.4...v1.0.5) (2024-02-21)
+
+
+### Bug Fixes
+
+* remove unnecessary echo statements and publish to GitHub Package Registry ([d5a96b9](https://github.com/jaem1n207/eslint-plugin-ben/commit/d5a96b9031181a4c419f6f202e32cab02e802365))
+
 ## [1.0.4](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.3...v1.0.4) (2024-02-21)
 
 
