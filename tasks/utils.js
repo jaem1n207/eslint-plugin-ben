@@ -1,7 +1,6 @@
 // @ts-check
 'use strict';
 
-// eslint-disable-next-line node/no-unpublished-require
 const chalk = require('chalk');
 const fs = require('node:fs/promises');
 
