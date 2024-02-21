@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.3...v1.0.4) (2024-02-21)
+
+
+### Bug Fixes
+
+* remove unused code and copy plugins from rspack.config.js ([3e9ae15](https://github.com/jaem1n207/eslint-plugin-ben/commit/3e9ae152d90c9a56c0fab6d06211603da644fa21))
+
 ## [1.0.3](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.2...v1.0.3) (2024-02-21)
 
 
