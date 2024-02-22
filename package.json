@@ -71,6 +71,9 @@
     "safe-publish-latest": "^2.0.0",
     "semantic-release": "^23.0.2"
   },
+  "optionalDependencies": {
+    "@rspack/binding-linux-x64-gnu": "^0.5.4"
+  },
   "engines": {
     "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
   },
