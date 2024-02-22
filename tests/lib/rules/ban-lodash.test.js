@@ -15,9 +15,6 @@ const rule = require('../../../lib/rules/ban-lodash'),
 // Tests
 //------------------------------------------------------------------------------
 
-const ESM_ERROR_MESSAGE = '"lodash" 대신 "lodash-es"를 사용해주세요.';
-const CJS_ERROR_MESSAGE = 'lodash-es는 esm 모듈만 지원하는 프로젝트에서 가능합니다.';
-
 const ruleTester = new RuleTester({
   parserOptions: { ecmaVersion: 2020, sourceType: 'module' },
 });
@@ -33,35 +30,35 @@ ruleTester.run('ban-lodash', rule, {
     {
       // 기본 lodash import를 lodash-es로 변경
       code: "import _ from 'lodash';",
-      errors: [{ message: ESM_ERROR_MESSAGE }],
+      errors: [{ messageId: 'esmMessage' }],
       output: "import _ from 'lodash-es';",
     },
     {
       code: "import * as _ from 'lodash';",
-      errors: [{ message: ESM_ERROR_MESSAGE }],
+      errors: [{ messageId: 'esmMessage' }],
       output: "import * as _ from 'lodash-es';",
     },
     {
       // lodash의 하위 경로 import를 lodash-es로 변경
       code: "import isEqual from 'lodash/isEqual';",
-      errors: [{ message: ESM_ERROR_MESSAGE }],
+      errors: [{ messageId: 'esmMessage' }],
       output: "import { isEqual } from 'lodash-es';",
     },
     {
       code: "import eq from 'lodash/isEqual';",
-      errors: [{ message: ESM_ERROR_MESSAGE }],
+      errors: [{ messageId: 'esmMessage' }],
       output: "import { isEqual as eq } from 'lodash-es';",
     },
     {
       // lodash의 다른 하위 경로 import를 lodash-es로 변경
       code: "import debounce from 'lodash/debounce';",
-      errors: [{ message: ESM_ERROR_MESSAGE }],
+      errors: [{ messageId: 'esmMessage' }],
       output: "import { debounce } from 'lodash-es';",
     },
     {
       // default, named import를 포함한 혼합 import를 lodash-es로 변경
       code: "import _, { isEqual, debounce } from 'lodash';",
-      errors: [{ message: ESM_ERROR_MESSAGE }],
+      errors: [{ messageId: 'esmMessage' }],
       output: "import _, { isEqual, debounce } from 'lodash-es';",
     },
     {
@@ -69,7 +66,7 @@ ruleTester.run('ban-lodash', rule, {
       code: "const _ = require('lodash');",
       errors: [
         {
-          message: CJS_ERROR_MESSAGE,
+          messageId: 'cjsMessage',
         },
       ],
       output: null,

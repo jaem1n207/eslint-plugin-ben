@@ -15,8 +15,6 @@ const rule = require('../../../lib/rules/ban-moment'),
 // Tests
 //------------------------------------------------------------------------------
 
-const ERROR_MESSAGE = '"moment" 대신 "date-fns"를 사용해주세요.';
-
 const ruleTester = new RuleTester({
   parserOptions: { ecmaVersion: 2020, sourceType: 'module' },
 });
@@ -30,12 +28,12 @@ ruleTester.run('ban-moment', rule, {
   invalid: [
     {
       code: "import moment from 'moment';",
-      errors: [{ message: ERROR_MESSAGE, type: 'ImportDeclaration' }],
+      errors: [{ messageId: 'preferDateFns', type: 'ImportDeclaration' }],
       output: "import moment from 'date-fns';",
     },
     {
       code: "import moment, { Moment } from 'moment';",
-      errors: [{ message: ERROR_MESSAGE, type: 'ImportDeclaration' }],
+      errors: [{ messageId: 'preferDateFns', type: 'ImportDeclaration' }],
       output: "import moment, { Moment } from 'date-fns';",
     },
   ],
