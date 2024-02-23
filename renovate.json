@@ -25,7 +25,8 @@
       "matchPackageNames": ["@semantic-release/*"]
     },
     {
-      "excludePackageNames": ["chalk"]
+      "matchPackageNames": ["chalk"],
+      "enabled": false
     }
   ]
 }
