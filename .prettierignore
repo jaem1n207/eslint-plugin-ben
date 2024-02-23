@@ -2,4 +2,6 @@
 build
 coverage
 
+CHANGELOG.md
+
 tasks/rule/templates/*

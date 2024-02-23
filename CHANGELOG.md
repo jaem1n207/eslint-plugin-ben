@@ -1,9 +1,8 @@
 # [1.1.0](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.5...v1.1.0) (2024-02-22)
 
-
 ### Features
 
-* add generate rule scripts ([ad5c37a](https://github.com/jaem1n207/eslint-plugin-ben/commit/ad5c37a0b390132157b9d1c35b44367efda47fd5))
+- add generate rule scripts ([ad5c37a](https://github.com/jaem1n207/eslint-plugin-ben/commit/ad5c37a0b390132157b9d1c35b44367efda47fd5))
 
 ## [1.0.5](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.4...v1.0.5) (2024-02-21)
 

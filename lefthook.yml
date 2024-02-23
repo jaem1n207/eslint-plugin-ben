@@ -10,7 +10,7 @@ pre-commit:
       glob: 'docs/rules/*.md'
       run: npm run update:eslint-docs
     'format':
-      glob: '*.{js,json}'
+      glob: '*.{js,json,yml}'
       run: npx prettier --write {staged_files} && git update-index --again
     'lint':
       run: npm run lint
