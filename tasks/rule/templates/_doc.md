@@ -1,4 +1,4 @@
-# <%= ruleDescription %> (`<%= ruleId %>`)
+# <%= ruleDescription %> (`<%= authorName %>/<%= ruleId %>`)
 
 ⚠️ This rule _warns_ in the ✅ `recommended` config.
 
@@ -25,10 +25,6 @@ Examples of **correct** code for this rule:
 // fill me in
 
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
