@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.1.0...v1.1.1) (2024-02-23)
+
+
+### Bug Fixes
+
+* update rule template with author name in rule ID ([c92a6a4](https://github.com/jaem1n207/eslint-plugin-ben/commit/c92a6a46fb47d955929ec42bddcdb45ec70bbf5b))
+
 # [1.1.0](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.5...v1.1.0) (2024-02-22)
 
 ### Features
