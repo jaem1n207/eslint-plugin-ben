@@ -1,4 +1,4 @@
-# Prefer date-fns to moment for better tree-shaking support (`ben/ban-moment`)
+# Prefer date-fns to moment for better tree-shaking support (`ben/no-moment`)
 
 ⚠️ This rule _warns_ in the ✅ `recommended` config.
 

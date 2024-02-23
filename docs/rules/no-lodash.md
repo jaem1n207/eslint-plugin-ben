@@ -1,4 +1,4 @@
-# Prefer lodash-es to lodash for better tree-shaking support (`ben/ban-lodash`)
+# Prefer lodash-es to lodash for better tree-shaking support (`ben/no-lodash`)
 
 ⚠️ This rule _warns_ in the ✅ `recommended` config.
 

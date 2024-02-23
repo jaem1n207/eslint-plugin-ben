@@ -40,14 +40,14 @@ npm install eslint-plugin-ben --save-dev
 
 ## 규칙 재설정하기
 
-특정 규칙을 재설정하고 싶다면, `rules` 섹션에서 해당 규칙을 오버라이드할 수 있습니다. 예를 들어, `ban-lodash` 규칙을 비활성화하고 `ban-moment` 규칙을 오류로 표시하려면 다음과 같이 설정하세요.
+특정 규칙을 재설정하고 싶다면, `rules` 섹션에서 해당 규칙을 오버라이드할 수 있습니다. 예를 들어, `no-lodash` 규칙을 비활성화하고 `no-moment` 규칙을 오류로 표시하려면 다음과 같이 설정하세요.
 
 ```json
 {
   "extends": ["plugin:ben/recommended"],
   "rules": {
-    "ben/ban-lodash": "off",
-    "ben/ban-moment": "error"
+    "ben/no-lodash": "off",
+    "ben/no-moment": "error"
   }
 }
 ```
@@ -76,10 +76,10 @@ npm install eslint-plugin-ben --save-dev
 ✅ Set in the `recommended` configuration.\
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
-| Name                                   | Description                                                | ⚠️ | 🔧 |
-| :------------------------------------- | :--------------------------------------------------------- | :- | :- |
-| [ban-lodash](docs/rules/ban-lodash.md) | prefer lodash-es to lodash for better tree-shaking support | ✅  | 🔧 |
-| [ban-moment](docs/rules/ban-moment.md) | prefer date-fns to moment for better tree-shaking support  | ✅  | 🔧 |
+| Name                                 | Description                                                | ⚠️ | 🔧 |
+| :----------------------------------- | :--------------------------------------------------------- | :- | :- |
+| [no-lodash](docs/rules/no-lodash.md) | prefer lodash-es to lodash for better tree-shaking support | ✅  | 🔧 |
+| [no-moment](docs/rules/no-moment.md) | prefer date-fns to moment for better tree-shaking support  | ✅  | 🔧 |
 
 <!-- end auto-generated rules list -->
 

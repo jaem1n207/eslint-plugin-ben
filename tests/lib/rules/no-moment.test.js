@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/ban-moment'),
+const rule = require('../../../lib/rules/no-moment'),
   RuleTester = require('eslint').RuleTester;
 
 //------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ const ruleTester = new RuleTester({
   parserOptions: { ecmaVersion: 2020, sourceType: 'module' },
 });
 
-ruleTester.run('ban-moment', rule, {
+ruleTester.run('no-moment', rule, {
   valid: [
     "import moment from 'date-fns';",
     "import moment, { Moment } from 'date-fns';",
