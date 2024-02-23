@@ -17,11 +17,11 @@ jobs:
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 21
           cache: npm
@@ -35,7 +35,7 @@ jobs:
 
       # Not using a matrix here since it's simpler
       # to just duplicate it and not spawn new instances
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 20
       - name: test build package on node@20 (LTS)
@@ -44,7 +44,7 @@ jobs:
           npm --version
           npm run test
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: 18
       - name: test build package on node@18 (LTS)
@@ -56,7 +56,7 @@ jobs:
       - name: Build package
         run: npm run build
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
         with:
           node-version: '>=20.8.1'
           cache: 'npm'

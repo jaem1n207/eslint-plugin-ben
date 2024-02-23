@@ -9,9 +9,9 @@ jobs:
   assign_reviewers:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
 
-      - uses: shufo/auto-assign-reviewer-by-files@v1.1.5
+      - uses: shufo/auto-assign-reviewer-by-files@5a54f3e900d93e5fc3729fa68b2d3a2f697f6dd3 # v1.1.5
         with:
           config: '.github/assign-by-files.yml'
           token: ${{ secrets.REGISTRY_GITHUB_TOKEN }}
