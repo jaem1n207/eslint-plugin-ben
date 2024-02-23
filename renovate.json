@@ -23,6 +23,9 @@
     {
       "groupName": "semantic-release",
       "matchPackageNames": ["@semantic-release/*"]
+    },
+    {
+      "excludePackageNames": ["chalk"]
     }
   ]
 }
