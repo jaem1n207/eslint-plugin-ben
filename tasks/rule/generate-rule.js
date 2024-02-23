@@ -7,9 +7,9 @@
  * under the MIT license.
  */
 
-const path = require('path');
-const fs = require('fs/promises');
-const cp = require('child_process');
+const path = require('node:path');
+const fs = require('node:fs/promises');
+const cp = require('node:child_process');
 const { exit } = require('node:process');
 
 const dedent = require('dedent');

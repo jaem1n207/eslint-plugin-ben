@@ -1,5 +1,5 @@
-const { exec } = require('child_process');
-const util = require('util');
+const { exec } = require('node:child_process');
+const util = require('node:util');
 const execAsync = util.promisify(exec);
 
 const { createTask } = require('./task');
