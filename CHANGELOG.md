@@ -4,6 +4,9 @@
 ### Bug Fixes
 
 * update rule template with author name in rule ID ([c92a6a4](https://github.com/jaem1n207/eslint-plugin-ben/commit/c92a6a46fb47d955929ec42bddcdb45ec70bbf5b))
+* refactor: 규칙에서 무언가를 허용하지 않는 경우에는 no- 접두사를 붙이도록 변경
+ban-lodash => no-lodash
+ban-moment => no-moment
 
 # [1.1.0](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.0.5...v1.1.0) (2024-02-22)
 

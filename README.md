@@ -20,7 +20,7 @@ module.exports = {
 };
 ```
 
-### `eslint-plugin-ben` 설치
+### eslint-plugin-ben 설치
 
 `eslint-plugin-ben`를 설치해주세요:
 
