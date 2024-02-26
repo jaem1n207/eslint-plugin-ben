@@ -167,7 +167,7 @@ const createRule = async () => {
   }
 
   console.log(
-    `\n🚀 All done! Make sure to run \`${chalk.blue('npm run test')}\` as you write the rule and \`${chalk.blue('npm run build && npm run update:eslint-docs')}\` when you are done.`,
+    `\n🚀 All done! Make sure to run \`${chalk.blue('npm run test')}\` as you write the rule and \`${chalk.blue('npm run update:eslint-docs')}\` when you are done.`,
   );
 };
 
