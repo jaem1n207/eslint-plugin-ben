@@ -35,8 +35,9 @@
     "prepublish": "not-in-publish || npm run prepublishOnly",
     "prepublishOnly": "safe-publish-latest && npm run build",
     "prettier": "prettier --write .",
+    "preupdate:eslint-docs": "npm run build",
     "test": "mocha tests --recursive",
-    "update:eslint-docs": "npm run build && eslint-doc-generator"
+    "update:eslint-docs": "eslint-doc-generator"
   },
   "config": {
     "commitizen": {
