@@ -89,4 +89,4 @@ npm install eslint-plugin-ben --save-dev
 
 eslint-plugin-ben 라이브러리에 기여하고 싶다면 아래 문서를 참고해주세요.
 
-[CONTRIBUTING]('./CONTRIBUTING.md)
+[CONTRIBUTING](/CONTRIBUTING.md)
