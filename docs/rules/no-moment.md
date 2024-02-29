@@ -26,4 +26,4 @@ import { format } from 'date-fns';
 
 ## When Not To Use It
 
-`moment`에서 `date-fns`로 마이그레이션이 완료된 후, `moment` 패키지를 사용하지 않게 되면 이 규칙을 비활성화할 수 있습니다.
+`moment`에서 `date-fns`로 마이그레이션이 완료된 후, `moment` 패키지를 사용하지 않게 되면 이 규칙을 사용하지 않는 것이 좋습니다.

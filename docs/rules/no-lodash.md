@@ -24,4 +24,4 @@ import { isArray } from 'lodash-es';
 
 ## When Not To Use It
 
-`lodash`에서 `lodash-es`로 마이그레이션이 완료된 후, `lodash` 패키지를 사용하지 않게 되면 이 규칙을 비활성화할 수 있습니다.
+`lodash`에서 `lodash-es`로 마이그레이션이 완료된 후, `lodash` 패키지를 사용하지 않게 되면 이 규칙을 사용하지 않는 것이 좋습니다.
