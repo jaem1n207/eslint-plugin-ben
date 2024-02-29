@@ -12,6 +12,9 @@ pre-commit:
     'format':
       glob: '*.{js,json,yml}'
       run: npx prettier --write {staged_files} && git update-index --again
-    'lint':
-      glob: '*.{js,json,md}'
-      run: npx eslint --max-warnings 0 {staged_files}
+    'lint-js':
+      glob: '*.{js}'
+      run: npm-run-all lint:format lint:js
+    'lint-docs':
+      glob: 'docs/**/*.md'
+      run: npm run lint:eslint-docs
