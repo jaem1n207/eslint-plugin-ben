@@ -1,3 +1,13 @@
+# [1.2.0](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.1.1...v1.2.0) (2024-03-06)
+
+
+### Features
+
+* no-circular-dependencies 규칙 작성 ([5ecfaab](https://github.com/jaem1n207/eslint-plugin-ben/commit/5ecfaab51613a8fb206b6f2b156f8e70a70aeef9))
+* 모듈 간 순환 의존성 감지 규칙 추가 ([8e144d4](https://github.com/jaem1n207/eslint-plugin-ben/commit/8e144d4b78198172b028cd5edb32092418234b0f))
+* 추천 구성 적용 ([a3e8573](https://github.com/jaem1n207/eslint-plugin-ben/commit/a3e8573bb34330d74c6b8ebd2ebccb0e8fc98b53))
+* 테스트 작성 편하게 하기 위한 유틸 함수 작성 ([42b9e23](https://github.com/jaem1n207/eslint-plugin-ben/commit/42b9e233f836026952fa7981f3336c3b5671ceab))
+
 ## [1.1.1](https://github.com/jaem1n207/eslint-plugin-ben/compare/v1.1.0...v1.1.1) (2024-02-23)
 
 
