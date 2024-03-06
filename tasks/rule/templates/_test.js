@@ -8,6 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
+const { test } = require('../../utils');
 const rule = require('../../../lib/rules/<%= ruleId %>'),
   RuleTester = require('eslint').RuleTester;
 
@@ -15,18 +16,18 @@ const rule = require('../../../lib/rules/<%= ruleId %>'),
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parserOptions: { ecmaVersion: 2020, sourceType: 'module' },
-});
+const ruleTester = new RuleTester();
 
 ruleTester.run('<%= ruleId %>', rule, {
-  valid: [
-    // give me some code that won't trigger a warning
-  ],
-  invalid: [
-    {
+  valid: [].concat(
+    test({
+      code: '' // give me some code that won't trigger a warning
+    })
+  ),
+  invalid: [].concat(
+    test({
       code: '<%= invalidCode %>',
       errors: [{ messageId: 'anyMessageIdHere' }], // comes from the rule file
-    },
-  ],
+    }),
+  )
 });

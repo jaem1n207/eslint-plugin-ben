@@ -8,6 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
+const { test } = require('../../utils');
 const rule = require('../../../lib/rules/no-moment'),
   RuleTester = require('eslint').RuleTester;
 
@@ -15,26 +16,30 @@ const rule = require('../../../lib/rules/no-moment'),
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester({
-  parserOptions: { ecmaVersion: 2020, sourceType: 'module' },
-});
+const ruleTester = new RuleTester();
 
 ruleTester.run('no-moment', rule, {
-  valid: [
-    "import moment from 'date-fns';",
-    "import moment, { Moment } from 'date-fns';",
-    "import { format } from 'date-fns';",
-  ],
-  invalid: [
-    {
+  valid: [].concat(
+    test({
+      code: "import moment from 'date-fns';",
+    }),
+    test({
+      code: "import moment, { Moment } from 'date-fns';",
+    }),
+    test({
+      code: "import { format } from 'date-fns';",
+    }),
+  ),
+  invalid: [].concat(
+    test({
       code: "import moment from 'moment';",
       errors: [{ messageId: 'preferDateFns', type: 'ImportDeclaration' }],
       output: "import moment from 'date-fns';",
-    },
-    {
+    }),
+    test({
       code: "import moment, { Moment } from 'moment';",
       errors: [{ messageId: 'preferDateFns', type: 'ImportDeclaration' }],
       output: "import moment, { Moment } from 'date-fns';",
-    },
-  ],
+    }),
+  ),
 });
