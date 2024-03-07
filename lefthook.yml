@@ -1,23 +1,49 @@
 commit-msg:
   commands:
-    'lint-commit-message':
+    lint-commit-message:
       run: npx commitlint --edit $1
+    spell-check:
+      run: npx cspell --no-summary {1}
 
 pre-commit:
+  piped: true
+  commands:
+    format:
+      run: npx lefthook run _pre-commit__format
+
+_pre-commit__format:
   parallel: true
   commands:
-    'update-eslint-docs':
-      glob: 'docs/rules/*.md'
+    docs:
+      run: npx lefthook run _pre-commit__format__docs
+    script:
+      run: npx lefthook run _pre-commit__format__script
+
+_pre-commit__format__docs:
+  piped: true
+  commands:
+    1_update-docs:
       run: npm run update:eslint-docs
-    'format':
+    2_lint-docs:
+      run: npm run lint:eslint-docs
+
+_pre-commit__format__script:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{js}'
+      run: npx eslint {staged_files}
+    style:
       glob: '*.{js,json,yml}'
       run: npx prettier --write {staged_files} && git update-index --again
-    'lint-js':
-      glob: '*.{js}'
-      run: npx npm-run-all lint:format lint:js
-    'lint-docs':
-      glob: 'docs/**/*.md'
-      run: npm run lint:eslint-docs
-    'rule-tests':
-      glob: 'tests/lib/rules/*.js'
+    spell-check:
+      glob: '*.{js,md}'
+      run: npx cspell {staged_files}
+
+pre-push:
+  parallel: true
+  commands:
+    test:
       run: npm run test
+    verifying-registry-signatures-packages:
+      run: npm audit signatures

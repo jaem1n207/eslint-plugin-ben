@@ -72,14 +72,16 @@ npm install eslint-plugin-ben --save-dev
 
 <!-- begin auto-generated rules list -->
 
+💼 Configurations enabled in.\
 ⚠️ Configurations set to warn in.\
 ✅ Set in the `recommended` configuration.\
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
-| Name                                 | Description                                                | ⚠️ | 🔧 |
-| :----------------------------------- | :--------------------------------------------------------- | :- | :- |
-| [no-lodash](docs/rules/no-lodash.md) | prefer lodash-es to lodash for better tree-shaking support | ✅  | 🔧 |
-| [no-moment](docs/rules/no-moment.md) | prefer date-fns to moment for better tree-shaking support  | ✅  | 🔧 |
+| Name                                                               | Description                                                | 💼 | ⚠️ | 🔧 |
+| :----------------------------------------------------------------- | :--------------------------------------------------------- | :- | :- | :- |
+| [no-circular-dependencies](docs/rules/no-circular-dependencies.md) | detect circular dependencies between modules               | ✅  |    |    |
+| [no-lodash](docs/rules/no-lodash.md)                               | prefer lodash-es to lodash for better tree-shaking support |    | ✅  | 🔧 |
+| [no-moment](docs/rules/no-moment.md)                               | prefer date-fns to moment for better tree-shaking support  |    | ✅  | 🔧 |
 
 <!-- end auto-generated rules list -->
 
