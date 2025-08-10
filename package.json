@@ -63,7 +63,7 @@
     "@semantic-release/release-notes-generator": "12.1.0",
     "chalk": "4.1.2",
     "commitizen": "4.3.0",
-    "cspell": "^8.6.0",
+    "cspell": "8.6.0",
     "cz-git": "1.8.0",
     "dedent": "1.5.1",
     "eslint": "8.57.0",
